@@ -1,0 +1,7 @@
+export interface ScheduleItem { time: string; title: string; description: string; kind: 'meal' | 'session' | 'games' | 'music' | 'travel' }
+export const retreatDays: { label: string; date: string; items: ScheduleItem[] }[] = [
+  { label: 'Sun', date: '27 Dec', items: [{ time: '08:00 AM', title: 'Departure from Chennai', description: 'Meet at your boarding point', kind: 'travel' }, { time: '01:00 PM', title: 'Welcome lunch', description: 'Dining hall', kind: 'meal' }, { time: '07:00 PM', title: 'Opening celebration', description: 'Main arena', kind: 'music' }] },
+  { label: 'Mon', date: '28 Dec', items: [{ time: '07:00 AM', title: 'Morning devotion', description: 'Prayer garden', kind: 'session' }, { time: '10:30 AM', title: 'Team games', description: 'Sports ground', kind: 'games' }, { time: '07:30 PM', title: 'Worship night', description: 'Main arena', kind: 'music' }] },
+  { label: 'Tue', date: '29 Dec', items: [{ time: '08:00 AM', title: 'Breakfast together', description: 'Dining hall', kind: 'meal' }, { time: '11:00 AM', title: 'Retreat session', description: 'Main arena', kind: 'session' }, { time: '04:00 PM', title: 'Spartans challenge', description: 'Sports ground', kind: 'games' }] },
+  { label: 'Wed', date: '30 Dec', items: [{ time: '08:00 AM', title: 'Farewell breakfast', description: 'Dining hall', kind: 'meal' }, { time: '11:00 AM', title: 'Closing session', description: 'Main arena', kind: 'session' }, { time: '02:00 PM', title: 'Journey home', description: 'Bus bay', kind: 'travel' }] },
+]

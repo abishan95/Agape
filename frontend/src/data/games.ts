@@ -1,0 +1,4 @@
+export interface TeamScore { rank: number; team: string; score: number; color: string }
+export interface RetreatGame { title: string; time: string; location: string; leader: string; status: 'up next' | 'completed' | 'coming soon'; icon: string }
+export const teamScores: TeamScore[] = [{ rank: 1, team: 'Spartans', score: 180, color: '#7950bd' }, { rank: 2, team: 'Eagles', score: 160, color: '#eb9e42' }, { rank: 3, team: 'Warriors', score: 145, color: '#69a76b' }, { rank: 4, team: 'Titans', score: 130, color: '#d1748d' }]
+export const retreatGames: RetreatGame[] = [{ title: 'The Amazing Relay', time: 'Mon · 10:30 AM', location: 'Sports ground', leader: 'Joel', status: 'up next', icon: '🏃' }, { title: 'Bible Quest', time: 'Mon · 03:00 PM', location: 'Main arena', leader: 'Priya', status: 'coming soon', icon: '🗺️' }, { title: 'Campfire Challenge', time: 'Sun · 08:30 PM', location: 'Bonfire circle', leader: 'Rachel', status: 'completed', icon: '🔥' }]

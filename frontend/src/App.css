@@ -1,0 +1,320 @@
+:root {
+  --bg-base: #07090C;
+  --bg-card: #151922;
+  --bg-inset: #0D1017;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(255, 255, 255, 0.16);
+  --accent-emerald: #10B981;
+  --accent-purple: #818CF8;
+  --text-primary: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+}
+
+/* App Full-Width Screen Frame */
+.app-phone-container {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 16px 16px calc(80px + env(safe-area-inset-bottom)) 16px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-base);
+  box-sizing: border-box;
+}
+
+/* Header */
+.neu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-top: env(safe-area-inset-top, 0px);
+  width: 100%;
+}
+
+.neu-header-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.neu-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+/* Profile Badge Button */
+.clay-profile-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #1A212E 0%, #0F131C 100%);
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+}
+
+.clay-profile-badge:active {
+  transform: scale(0.96);
+}
+
+.clay-badge-icon {
+  font-size: 20px;
+}
+
+.clay-badge-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
+}
+
+/* Announcements Notice Banner */
+.neu-notice-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(160deg, #181E2B 0%, #10141D 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.neu-notice-banner:active {
+  transform: scale(0.98);
+}
+
+.neu-notice-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.neu-notice-content {
+  flex: 1;
+}
+
+.neu-chevron {
+  font-size: 22px;
+  color: var(--text-dim);
+}
+
+/* AGAPE Retreat Pass Card */
+.neu-pass-card {
+  width: 100%;
+  padding: 18px 16px;
+  background: linear-gradient(160deg, #181F2D 0%, #0E121A 100%);
+  border: 1px solid var(--border-glow);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.neu-pass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+}
+
+.neu-date-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.12);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.neu-pass-split-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.neu-pass-left-col {
+  flex: 1;
+}
+
+.neu-pass-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin: 2px 0 4px 0;
+}
+
+.neu-pass-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Allocation Shelf */
+.neu-alloc-shelf {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: var(--bg-inset);
+  padding: 12px 8px;
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  box-sizing: border-box;
+}
+
+.neu-alloc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.neu-alloc-item small {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-dim);
+  letter-spacing: 0.8px;
+}
+
+.neu-alloc-item span {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 3px;
+}
+
+/* Feature 2x2 Grid */
+.neu-section-headline {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--text-dim);
+  margin: 16px 0 10px 0;
+  text-transform: uppercase;
+}
+
+.neu-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.neu-tile-card {
+  padding: 16px 14px;
+  background: linear-gradient(160deg, #151922 0%, #0D1017 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.neu-tile-card:active {
+  transform: scale(0.97);
+}
+
+.neu-tile-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.neu-tile-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.neu-tile-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Fixed Bottom Navigation Bar */
+.neu-bottom-dock-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 12px calc(8px + env(safe-area-inset-bottom)) 12px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.neu-bottom-dock {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(18, 22, 31, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glow);
+  border-radius: 24px;
+  padding: 6px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.85);
+  pointer-events: auto;
+}
+
+.neu-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 6px 4px;
+  border-radius: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.neu-tab-btn.active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+}
