@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // User Directory
 const MOCK_USERS: Record<string, any> = {
