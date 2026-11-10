@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-// User Directory (Identical Data Structure)
+// User Directory
 const MOCK_USERS: Record<string, any> = {
   '9578811268': {
     id: 'usr-1',
@@ -134,14 +134,12 @@ export default function App() {
 
       {/* TOP HEADER BAR */}
       <header style={styles.topHeader}>
-        {/* Left Side */}
         <div>
           <span style={{ fontSize: '11px', color: '#F5C58D', fontWeight: '800', letterSpacing: '0.5px' }}>{getGreeting()}</span>
           <h2 style={{ fontSize: '18px', fontWeight: '800', color: '#F8F5F2', margin: 0 }}>Welcome {user.full_name}</h2>
           <p style={{ fontSize: '11px', color: '#C9C2D5', margin: 0 }}>Agape 2026</p>
         </div>
 
-        {/* Right Side */}
         <button onClick={() => setUser(null)} style={styles.logoutBtn}>
           Logout 🚪
         </button>
@@ -154,7 +152,7 @@ export default function App() {
         {activeTab === 'home' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             
-            {/* BIG HIGHLIGHT PASS CARD (NEUMORPHIC GOLD SURFACING) */}
+            {/* PASS CARD */}
             <div className="neuro-card-highlight">
               <div style={{ borderBottom: '1px solid rgba(73, 65, 111, 0.15)', paddingBottom: '12px', marginBottom: '14px' }}>
                 <span style={{ fontSize: '11px', fontWeight: '800', color: '#393256', textTransform: 'uppercase' }}>PASSENGER PASS</span>
@@ -163,7 +161,6 @@ export default function App() {
                 </h3>
               </div>
 
-              {/* Pass Details Data Group */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 
                 {/* Bus & Boarding Switcher */}
@@ -173,7 +170,6 @@ export default function App() {
                     <strong style={{ color: '#F5C58D', fontSize: '15px' }}>{user.bus_number}</strong>
                   </div>
                   
-                  {/* Boarding Point Mode Toggle */}
                   <div style={{ display: 'flex', gap: '6px', margin: '8px 0' }}>
                     <button 
                       onClick={() => setBoardingType('onboarding')}
@@ -199,7 +195,7 @@ export default function App() {
                   <strong style={{ color: '#F8F5F2', fontSize: '13px' }}>{user.dorm_number}</strong>
                 </div>
 
-                {/* Game Team & Customizable Leader Reveal */}
+                {/* Game Team */}
                 <div style={styles.innerDarkCard}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                     <span style={{ color: '#C9C2D5', fontSize: '10px', fontWeight: '800', letterSpacing: '0.5px' }}>GAME TEAM</span>
@@ -213,7 +209,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* CENTER: ANNOUNCEMENTS SQUARE */}
+            {/* ANNOUNCEMENTS */}
             <div>
               <h4 style={styles.sectionHeading}>Announcements</h4>
               <div className="neuro-card" style={{ borderLeft: '4px solid #F5C58D' }}>
@@ -228,7 +224,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* BOTTOM: DAY TO DAY SCHEDULE & MY COMPANION */}
+            {/* SCHEDULE & COMPANION */}
             <div>
               <h4 style={styles.sectionHeading}>Day to Day Schedule</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '22px' }}>
@@ -248,7 +244,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* MY COMPANION (MEAL PARTNER FIXER) */}
               <h4 style={styles.sectionHeading}>My Companion</h4>
               <div className="neuro-card">
                 <p style={{ fontSize: '12px', color: '#C9C2D5', marginBottom: '14px' }}>
@@ -293,7 +288,7 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== MATCH TAB (PRAYER PARTNER) ==================== */}
+        {/* ==================== MATCH TAB ==================== */}
         {activeTab === 'match' && (
           <div className="neuro-card">
             <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#F8F5F2', marginBottom: '4px' }}>🤝 Match & Prayer Partner</h3>
@@ -333,7 +328,7 @@ export default function App() {
 
       </main>
 
-      {/* FLOATING SOFT-NEUMORPHIC BOTTOM NAVIGATION BAR */}
+      {/* FLOATING BOTTOM NAVIGATION */}
       <nav style={styles.floatingNav} className="neuro-nav">
         <button onClick={() => setActiveTab('home')} style={activeTab === 'home' ? styles.navActive : styles.navItem}>
           <span style={{ fontSize: '18px' }}>🏠</span>
@@ -361,7 +356,7 @@ export default function App() {
   );
 }
 
-// Custom Neumorphic CSS Styling Rules
+// Neumorphic CSS Injector
 const customCss = `
 * { box-sizing: border-box; }
 
@@ -372,7 +367,6 @@ body {
   color: #F8F5F2;
 }
 
-/* Soft Neumorphic Standard Card */
 .neuro-card {
   background: #514875;
   border-radius: 28px;
@@ -381,7 +375,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Champagne Gold Elevated Accent Card */
 .neuro-card-highlight {
   background: linear-gradient(135deg, #F5C58D 0%, #EBAE9C 100%);
   border-radius: 30px;
@@ -390,7 +383,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Neumorphic Gold Primary Action Button */
 .neuro-btn-gold {
   width: 100%;
   padding: 16px 20px;
@@ -409,7 +401,6 @@ body {
   transform: scale(0.98);
 }
 
-/* Inset Neumorphic Input Field */
 .neuro-input {
   width: 100%;
   padding: 14px 18px;
@@ -422,7 +413,6 @@ body {
   box-shadow: inset 3px 3px 6px rgba(25, 20, 42, 0.5), inset -2px -2px 5px rgba(98, 88, 140, 0.15);
 }
 
-/* Floating Neumorphic Bottom Navigation */
 .neuro-nav {
   background: #393256;
   border-radius: 32px;
@@ -437,8 +427,13 @@ if (typeof document !== 'undefined') {
   document.head.appendChild(styleEl);
 }
 
-// Inline Style Mappings
+// React CSS Styles Definition
 const styles: { [key: string]: React.CSSProperties } = {
   screenWrapper: { minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', backgroundColor: '#49416F' },
   bgOverlay: { position: 'fixed', inset: 0, backgroundImage: 'url("/mountain-bg.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#49416F', opacity: 0.15, zIndex: 1 },
-  welcomeContainer: { position: '
+  welcomeContainer: { position: 'relative', zIndex: 2, width: '100%', maxWidth: '380px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', minHeight: '80vh', textAlign: 'center' },
+  welcomeSubTag: { fontSize: '11px', color: '#BBA5E8', letterSpacing: '2px', fontWeight: '800' },
+  brandTitle: { fontSize: '24px', fontWeight: '800', color: '#F8F5F2', marginTop: '4px' },
+  welcomeHeroCard: { width: '100%', textAlign: 'center' },
+  loginContainer: { position: 'relative', zIndex: 2, width: '100%', maxWidth: '360px' },
+  backBtn: { background: 'none', border: 'none',
